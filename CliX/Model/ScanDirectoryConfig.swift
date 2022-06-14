@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ScanDirectoryConfig: Identifiable {
+struct ScanDirectoryConfig: Identifiable, Hashable {
     let id = UUID()
     var type: DataDirectoryType
     var color: Color

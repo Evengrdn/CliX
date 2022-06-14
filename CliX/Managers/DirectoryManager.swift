@@ -22,6 +22,7 @@ struct DirectoryManager {
                 homeDirectory = String(homeDirectory[..<range.lowerBound])
             }
         }
+        
         return homeDirectory
     }
     
@@ -54,6 +55,7 @@ struct DirectoryManager {
         if !path.hasSuffix("/") {
             path += "/"
         }
+        
         return path
     }
     
@@ -63,6 +65,7 @@ struct DirectoryManager {
         if path.hasSuffix("/") {
             path.removeLast()
         }
+        
         return path
     }
     
@@ -84,9 +87,7 @@ struct DirectoryManager {
     
     
     func getSize(path: String, completion: (() -> Void)?) -> Int64 {
-        
         var directorySize: Int64 = 0
-        
         var normalizedPath: String
         let destinationType = getDestinationType(path: path)
         
@@ -121,12 +122,24 @@ struct DirectoryManager {
                 }
             }
         }
-        
         guard let completion = completion else { return directorySize }
-        
         completion()
         
         return directorySize
+    }
+    
+    func clean(path: String) {
+        do {
+            try fileManager.removeItem(atPath: path)
+        } catch {
+            print("Почистить не удалось")
+        }
+        
+    }
+    
+    func clean(type: DataDirectoryType) {
+        let fullPath = getFullPath(directoryType: type)
+        clean(path: fullPath)
     }
     
 }

@@ -25,14 +25,19 @@ struct DirectoryData: Identifiable {
     
 }
 
-final class DirectoryScan: Identifiable {
+final class DirectoryScan: Identifiable, ObservableObject {
     
-    public init(config: ScanDirectoryConfig, result: State<[DirectoryData]>) {
+    static func == (lhs: DirectoryScan, rhs: DirectoryScan) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+
+    public init(config: ScanDirectoryConfig, result: [DirectoryData]) {
         self.config = config
         self.result = result
     }
     
     let id = UUID()
     var config: ScanDirectoryConfig
-    var result: State<[DirectoryData]>
+    var result: [DirectoryData]
 }

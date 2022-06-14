@@ -26,8 +26,6 @@ struct StatisticBarView: View {
                     DiagramData(value: 3999, title: "Type C", color: .orange, format: { String(format: "$%.2f", $0) })
                 ]).blur(radius: 20).padding(.top, 10)
             }
-            
-            Text("Просканируй диск и тут появится диаграмма").font(.title).opacity(diagramDataModels.count > 0 ? 0 : 1)
         }
         
         

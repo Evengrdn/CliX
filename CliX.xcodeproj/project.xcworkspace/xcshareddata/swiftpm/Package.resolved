@@ -8,24 +8,6 @@
         "branch" : "main",
         "revision" : "742c69a81e13529a3a5640faa544df6ca6d5738b"
       }
-    },
-    {
-      "identity" : "swiftpiechart",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ilamanov/SwiftPieChart",
-      "state" : {
-        "revision" : "e6f67120c55e7402f67f3463994105ff6cfbcd10",
-        "version" : "1.0.61"
-      }
-    },
-    {
-      "identity" : "swiftuicharts",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/willdale/SwiftUICharts",
-      "state" : {
-        "revision" : "7bca99ef04dd6e46ec9621e8700f2392697f0f8d",
-        "version" : "2.10.0"
-      }
     }
   ],
   "version" : 2

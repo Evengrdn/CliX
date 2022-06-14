@@ -11,23 +11,15 @@ import DiagramKit
 struct LayoutExample: View {
     
     @State var derivedData: [DirectoryData] = []
-    
     @State var documentationCacheData: [DirectoryData] = []
-    
     @State var macOSDeviceSupportData: [DirectoryData] = []
-    
     @State var iOSDeviceSupportData: [DirectoryData] = []
-    
     @State var archivesData: [DirectoryData] = []
-    
     @State var iOSDeviceLogsData: [DirectoryData] = []
-    
     @State var watchOSDeviceSupportData: [DirectoryData] = []
-    
+
     @State var isPresented = false
-    
     @State var diskDataModels: [DiagramData] = []
-    
     let directuryManager = DirectoryManager()
     
     var body: some View {

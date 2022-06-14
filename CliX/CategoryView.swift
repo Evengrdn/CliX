@@ -15,6 +15,16 @@ struct CategoryView: View {
     @State private var rotateIcon = false
     @Binding var showData: Bool
     @Binding var showDetailIcon: [DirectoryData]
+    
+    let selectColor: LinearGradient = {
+        let linearGradient = LinearGradient(colors: [.init(red: 240.0 / 255, green: 143.0 / 255, blue: 144.0 / 255), .init(red: 157.0 / 255, green: 41.0 / 255, blue: 51.0 / 255)], startPoint: .leading, endPoint: .trailing)
+        
+        return linearGradient
+        
+    }()
+    
+    let defoultColor = Color.teal
+    
     private var bytesSumm: Int64 {
         showDetailIcon.reduce(0, { result, element in
             result + element.sizeAtDiskInByte
@@ -64,7 +74,7 @@ struct CategoryView: View {
                 
             }
             
-        }.padding().background(.thickMaterial).clipShape(RoundedRectangle(cornerRadius: 8))
+        }.padding().background(.ultraThickMaterial).clipShape(RoundedRectangle(cornerRadius: 8))
         
     
     }
