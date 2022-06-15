@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        RootPageView().frame(minWidth: 900, idealWidth: 900, maxWidth: .infinity, minHeight: 700, idealHeight: 700, maxHeight: .infinity, alignment: .top)
+        RootPageView().frame(minWidth: 900, idealWidth: 900, maxWidth: .infinity, minHeight: 650, idealHeight: 650, maxHeight: .infinity, alignment: .top)
         
     }
 }

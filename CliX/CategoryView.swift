@@ -74,7 +74,7 @@ struct CategoryView: View {
                 
             }
             
-        }.padding().background(.ultraThickMaterial).clipShape(RoundedRectangle(cornerRadius: 8))
+        }.padding().background(.regularMaterial).clipShape(RoundedRectangle(cornerRadius: 8))
         
     
     }

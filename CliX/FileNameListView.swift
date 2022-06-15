@@ -47,7 +47,6 @@ struct FileNameListView: View {
                                     $0.sizeInDouble() ?? 0.0 > $1.sizeInDouble() ?? 0.0
                                 }
                                 break
-
                             default:
                                 data.sort{
                                     $0.name < $1.name
@@ -66,11 +65,10 @@ struct FileNameListView: View {
                                 Text(item.sizeAtDisk)
                             }
                         }
-                        
                     }
                     Divider()
                 }.clipShape(RoundedRectangle(cornerRadius: 8))
-            }.clipShape(RoundedRectangle(cornerRadius: 8)).frame(height: isPresented ? listSize : 0).clipped()
+            }.clipShape(RoundedRectangle(cornerRadius: 8)).frame(height: isPresented && data.count > 0  ? listSize : 0).clipped()
         }
         
     }
