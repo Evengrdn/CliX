@@ -7,7 +7,7 @@
 
 ## Demo
 <p align="center">  
-<img src = "Assets/DEMO.gif" /><br>
+<img src = "Media/DEMO.gif" /><br>
 </p>
 
 ## License
