@@ -25,35 +25,19 @@ struct GeneralPageView: View {
                     HStack(alignment: .center, spacing: 0){
                         StatisticBarView(diagramDataModels: $viewModel.diagramPresintationData).background(.regularMaterial).clipShape(RoundedRectangle(cornerRadius: 8))
                     }
-                    
-                    HStack(alignment: .top){
-                        HStack{
-                            VStack{
-                                HStack{
-                                    Text("Cleaned: ")
-                                    Text("\(DiskManager.shared.fromByteInSpace(Int64(viewModel.totalCleaned)))")
-                                    Spacer()
-                                }.padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                                HStack{
-                                    Text("Last clean: ")
-                                    viewModel.lastClean == nil ?  Text("Never"): Text(viewModel.lastClean!, style: .date)
-                                    Spacer()
-                                }.padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
-                            }
-                            VStack{
-                                HStack{
-                                    Text("Cleaned: ")
-                                    Text("\(DiskManager.shared.fromByteInSpace(Int64(viewModel.totalCleaned)))")
-                                    Spacer()
-                                }.padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                                HStack{
-                                    Text("Last clean: ")
-                                    viewModel.lastClean == nil ?  Text("Never"): Text(viewModel.lastClean!, style: .date)
-                                    Spacer()
-                                }.padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
-                            }
-                        }.background(.regularMaterial).clipShape(RoundedRectangle(cornerRadius: 8))
-
+                    HStack{
+                        VStack{
+                            HStack{
+                                Text("Cleaned: ")
+                                Text("\(DiskManager.shared.fromByteInSpace(Int64(viewModel.totalCleaned)))")
+                                Spacer()
+                            }.padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                            HStack{
+                                Text("Last clean: ")
+                                viewModel.lastClean == nil ?  Text("Never"): Text(viewModel.lastClean!, style: .date)
+                                Spacer()
+                            }.padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
+                        }
                         VStack{
                             Button {
                                 withAnimation {
@@ -61,29 +45,30 @@ struct GeneralPageView: View {
                                 }
                             } label: {
                                 Text("Scan").padding()
-                                
+
                             }.buttonStyle(.borderless)
                                 .contentShape(Rectangle())
                                 .disabled(viewModel.isLoading)
                                 .background(.regularMaterial)
                                 .clipShape(RoundedRectangle(cornerRadius: 8))
                                 .foregroundColor(.blue)
-                            
+                        }
+                        VStack{
                             Button {
                                 withAnimation {
                                     viewModel.startClean()
                                 }
                             } label: {
                                 Text("Clean").padding()
-                                
+
                             }.buttonStyle(.borderless)
                                 .contentShape(Rectangle())
                                 .disabled(viewModel.isLoading || !viewModel.isCanClean)
                                 .background(.regularMaterial)
                                 .clipShape(RoundedRectangle(cornerRadius: 8))
                                 .foregroundColor(buttonColor)
-                            
-                            
+
+
                         }.buttonStyle(.bordered)
                         VStack{
                             Link(destination: URL(string: "https://github.com/Evengrdn")!) {

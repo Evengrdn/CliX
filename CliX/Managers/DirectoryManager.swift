@@ -132,7 +132,7 @@ struct DirectoryManager {
         do {
             try fileManager.removeItem(atPath: path)
         } catch {
-            print("Почистить не удалось")
+            print("Clean error")
         }
         
     }

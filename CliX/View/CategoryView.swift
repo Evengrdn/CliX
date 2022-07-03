@@ -8,8 +8,6 @@
 import SwiftUI
 import UniformTypeIdentifiers
 
-
-
 struct CategoryView: View {
     
     @State private var rotateIcon = false
@@ -34,7 +32,7 @@ struct CategoryView: View {
     let title: String
     
     let searchpath: String
-        
+    
     var body: some View {
         
         VStack{
@@ -55,7 +53,7 @@ struct CategoryView: View {
                                 .labelStyle(.iconOnly)
                                 .imageScale(.large)
                                 .rotationEffect(.degrees(rotateIcon ? 90 : 0))
-
+                            
                                 .animation(.easeInOut, value: rotateIcon)
                                 .foregroundColor(.blue)
                         }.buttonStyle(.plain).opacity(showDetailIcon.count >= 1 ? 1 : 0)
@@ -75,15 +73,13 @@ struct CategoryView: View {
             }
             
         }.padding().background(.regularMaterial).clipShape(RoundedRectangle(cornerRadius: 8))
-        
-    
     }
 }
 
 struct CategoryView_Previews: PreviewProvider {
     
     static var previews: some View {
-        CategoryView(showData: TreashCan.$showData, showDetailIcon: TreashCan.$showDetail, title: "Derived data", searchpath: "asdasdasds")
+        CategoryView(showData: TreashCan.$showData, showDetailIcon: TreashCan.$showDetail, title: "Derived data", searchpath: "searchpath/searchpath/searchpath")
     }
 }
 

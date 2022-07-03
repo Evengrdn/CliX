@@ -14,9 +14,6 @@
 		0531878D284D24AE00A3306C /* GeneralPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531878C284D24AE00A3306C /* GeneralPageViewModel.swift */; };
 		0531878F284D272300A3306C /* DirectoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531878E284D272300A3306C /* DirectoryData.swift */; };
 		054241C02801A9BB0074E525 /* RootPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054241BF2801A9BB0074E525 /* RootPageView.swift */; };
-		0545B1CC2846973400465F39 /* LayoutTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0545B1CB2846973400465F39 /* LayoutTemplate.swift */; };
-		0549B2F1282C26EA00FC4FEC /* MultiplyCircleDiagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0549B2F0282C26EA00FC4FEC /* MultiplyCircleDiagram.swift */; };
-		0549B2F3282C2AAC00FC4FEC /* DigramCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0549B2F2282C2AAC00FC4FEC /* DigramCircle.swift */; };
 		0555F92D281F082500151989 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0555F92C281F082500151989 /* info.plist */; };
 		0555F92F282003D200151989 /* DiskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555F92E282003D200151989 /* DiskManager.swift */; };
 		056BC66D2836C76400EB0A84 /* DiagramKit in Frameworks */ = {isa = PBXBuildFile; productRef = 056BC66C2836C76400EB0A84 /* DiagramKit */; };
@@ -25,9 +22,7 @@
 		0576FE092800707200478783 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0576FE082800707200478783 /* ContentView.swift */; };
 		0576FE0B2800707300478783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0576FE0A2800707300478783 /* Assets.xcassets */; };
 		0576FE0E2800707300478783 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0576FE0D2800707300478783 /* Preview Assets.xcassets */; };
-		0591F942282A2C9700884F41 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0591F941282A2C9700884F41 /* NavigationView.swift */; };
 		05A3C0D228020C030048EC8C /* DropdownIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A3C0D128020C030048EC8C /* DropdownIconView.swift */; };
-		05A3C0D4280228EB0048EC8C /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A3C0D3280228EB0048EC8C /* CategoryListView.swift */; };
 		05A3C0D628034FB30048EC8C /* FileNameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A3C0D528034FB30048EC8C /* FileNameListView.swift */; };
 		05AA2843280C8D7600F08429 /* DirectoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AA2842280C8D7600F08429 /* DirectoryManager.swift */; };
 		05B267C1284D2CA100F01AAA /* ScanDirectoryConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B267C0284D2CA100F01AAA /* ScanDirectoryConfig.swift */; };
@@ -43,9 +38,6 @@
 		0531878C284D24AE00A3306C /* GeneralPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPageViewModel.swift; sourceTree = "<group>"; };
 		0531878E284D272300A3306C /* DirectoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryData.swift; sourceTree = "<group>"; };
 		054241BF2801A9BB0074E525 /* RootPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPageView.swift; sourceTree = "<group>"; };
-		0545B1CB2846973400465F39 /* LayoutTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTemplate.swift; sourceTree = "<group>"; };
-		0549B2F0282C26EA00FC4FEC /* MultiplyCircleDiagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplyCircleDiagram.swift; sourceTree = "<group>"; };
-		0549B2F2282C2AAC00FC4FEC /* DigramCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigramCircle.swift; sourceTree = "<group>"; };
 		0555F92C281F082500151989 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		0555F92E282003D200151989 /* DiskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskManager.swift; sourceTree = "<group>"; };
 		056FA7F52801B7250045802A /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
@@ -55,9 +47,7 @@
 		0576FE0A2800707300478783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0576FE0D2800707300478783 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0576FE0F2800707300478783 /* CliX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CliX.entitlements; sourceTree = "<group>"; };
-		0591F941282A2C9700884F41 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		05A3C0D128020C030048EC8C /* DropdownIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownIconView.swift; sourceTree = "<group>"; };
-		05A3C0D3280228EB0048EC8C /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
 		05A3C0D528034FB30048EC8C /* FileNameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNameListView.swift; sourceTree = "<group>"; };
 		05AA2842280C8D7600F08429 /* DirectoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryManager.swift; sourceTree = "<group>"; };
 		05B267C0284D2CA100F01AAA /* ScanDirectoryConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDirectoryConfig.swift; sourceTree = "<group>"; };
@@ -80,6 +70,9 @@
 		0531877A284D1F8800A3306C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				054241BF2801A9BB0074E525 /* RootPageView.swift */,
+				056FA7F52801B7250045802A /* CategoryView.swift */,
+				05A3C0D528034FB30048EC8C /* FileNameListView.swift */,
 				05318789284D23FE00A3306C /* GenralPageView */,
 				0576FE082800707200478783 /* ContentView.swift */,
 				05B267C22856775B00F01AAA /* LoadingScreen.swift */,
@@ -119,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				05A3C0D128020C030048EC8C /* DropdownIconView.swift */,
-				05A3C0D3280228EB0048EC8C /* CategoryListView.swift */,
 			);
 			path = UIElement;
 			sourceTree = "<group>";
@@ -153,12 +145,7 @@
 				0576FE0A2800707300478783 /* Assets.xcassets */,
 				0576FE0F2800707300478783 /* CliX.entitlements */,
 				0576FE0C2800707300478783 /* Preview Content */,
-				054241BF2801A9BB0074E525 /* RootPageView.swift */,
-				056FA7F52801B7250045802A /* CategoryView.swift */,
-				05A3C0D528034FB30048EC8C /* FileNameListView.swift */,
 				0555F92C281F082500151989 /* info.plist */,
-				0591F941282A2C9700884F41 /* NavigationView.swift */,
-				0545B1CB2846973400465F39 /* LayoutTemplate.swift */,
 			);
 			path = CliX;
 			sourceTree = "<group>";
@@ -184,8 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				05E9A43D282AAAE9005B9B3E /* StatisticBarView.swift */,
-				0549B2F0282C26EA00FC4FEC /* MultiplyCircleDiagram.swift */,
-				0549B2F2282C2AAC00FC4FEC /* DigramCircle.swift */,
 			);
 			path = StatisticBar;
 			sourceTree = "<group>";
@@ -267,8 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0549B2F3282C2AAC00FC4FEC /* DigramCircle.swift in Sources */,
-				0591F942282A2C9700884F41 /* NavigationView.swift in Sources */,
 				05B267C32856775B00F01AAA /* LoadingScreen.swift in Sources */,
 				0531878D284D24AE00A3306C /* GeneralPageViewModel.swift in Sources */,
 				05318781284D208D00A3306C /* DataProvider.swift in Sources */,
@@ -285,10 +268,7 @@
 				0555F92F282003D200151989 /* DiskManager.swift in Sources */,
 				05A3C0D228020C030048EC8C /* DropdownIconView.swift in Sources */,
 				05AA2843280C8D7600F08429 /* DirectoryManager.swift in Sources */,
-				05A3C0D4280228EB0048EC8C /* CategoryListView.swift in Sources */,
 				0531878F284D272300A3306C /* DirectoryData.swift in Sources */,
-				0549B2F1282C26EA00FC4FEC /* MultiplyCircleDiagram.swift in Sources */,
-				0545B1CC2846973400465F39 /* LayoutTemplate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = CliX/CliX.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -443,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = CliX/CliX.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

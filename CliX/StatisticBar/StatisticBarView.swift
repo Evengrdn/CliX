@@ -31,38 +31,3 @@ struct StatisticBarView: View {
         
     }
 }
-
-//struct StatisticBarView_Previews: PreviewProvider {
-//    static var previews: some View {
-//       StatisticBarView()
-//    }
-//}
-
-struct ProgressBar: View {
-    
-    @Binding var progress: Double
-    
-    var color: Color = .red
-    
-    var showProgressCounter = true
-    
-    var body: some View {
-        ZStack{
-            Circle()
-                .stroke(lineWidth: 20)
-                .opacity(0.3)
-                .foregroundColor(color)
-            Circle()
-                .trim(from: 0.0, to: progress)
-                .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
-                .foregroundColor(color)
-                .rotationEffect(Angle(degrees: -90))
-            
-            Text(String(format: "%.0f %%", min(self.progress, 1.0)*100.0))
-                .font(.largeTitle)
-                .bold()
-                .animation(.none)
-                .opacity(showProgressCounter ? 1 : 0)
-        }
-    }
-}
