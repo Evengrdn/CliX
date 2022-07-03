@@ -5,5 +5,10 @@
   <img src = "https://img.shields.io/badge/license-MIT-green.svg" />
 </p>
 
+## Demo
+<p align="center">  
+<img src = "Assets/DEMO.gif" /><br>
+</p>
+
 ## License
 CliX is available under the MIT license, see the [LICENSE](LICENSE) file for more information.

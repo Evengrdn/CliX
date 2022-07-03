@@ -30,6 +30,7 @@
 		05E9A43E282AAAE9005B9B3E /* StatisticBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A43D282AAAE9005B9B3E /* StatisticBarView.swift */; };
 		F4177DD3287216B600C18B32 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F4177DD2287216B600C18B32 /* README.md */; };
 		F4177DDA2872189A00C18B32 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F4177DD92872189A00C18B32 /* AppIcon.png */; };
+		F4177DDC2872349300C18B32 /* DEMO.gif in Resources */ = {isa = PBXBuildFile; fileRef = F4177DDB2872349300C18B32 /* DEMO.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		F4177DD2287216B600C18B32 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F4177DD7287217DC00C18B32 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		F4177DD92872189A00C18B32 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
+		F4177DDB2872349300C18B32 /* DEMO.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = DEMO.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 		F4177DD82872186D00C18B32 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				F4177DDB2872349300C18B32 /* DEMO.gif */,
 				F4177DD92872189A00C18B32 /* AppIcon.png */,
 			);
 			path = Media;
@@ -260,6 +263,7 @@
 				F4177DD3287216B600C18B32 /* README.md in Resources */,
 				0576FE0B2800707300478783 /* Assets.xcassets in Resources */,
 				0555F92D281F082500151989 /* info.plist in Resources */,
+				F4177DDC2872349300C18B32 /* DEMO.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
