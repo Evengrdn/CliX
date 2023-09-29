@@ -10,7 +10,7 @@ import DiagramKit
 
 struct RootPageView: View {
     var body: some View {
-        GeneralPageView()
+        GeneralPageViewController()
     }
 }
 

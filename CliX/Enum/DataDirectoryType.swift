@@ -7,34 +7,26 @@
 
 import Foundation
 
-enum DataDirectoryType {
+/// Стандартные директория сканирования
+enum DataDirectoryType: String, CaseIterable {
     
-    case homeDirectory
+    case iOSDeviceSupport = "iOSDevice support"
     
-    case xcodeDefaultPath
+    case iOSDeviceLogs = "iOSDevice logs"
     
-    case iOSDeviceSupport
+    case derivedData = "Derived data"
     
-    case macOSDeviceSupport
+    case watchOSDeviceSupport = "watchOSDevice support"
     
-    case iOSDeviceLogs
+    case documentationCache = "Documentation cache"
     
-    case derivedData
+    case archives = "Archives"
     
-    case watchOSDeviceSupport
-    
-    case documentationCache
-    
-    case archives
-    
+    /// Путь до стандартной директории
     var path: String {
         switch self {
-            case .homeDirectory:
-                return "/Library/Containers/"
             case .iOSDeviceSupport:
                 return "/iOS DeviceSupport/"
-            case .macOSDeviceSupport:
-                return "/macOS DeviceSupport/"
             case .iOSDeviceLogs:
                 return "/iOS Device Logs/"
             case .derivedData:
@@ -45,8 +37,6 @@ enum DataDirectoryType {
                 return "/DocumentationCache/"
             case .archives:
                 return "/Archives/"
-            case .xcodeDefaultPath:
-                return "/Library/Developer/Xcode"
         }
     }
 }

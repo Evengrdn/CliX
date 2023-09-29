@@ -9,43 +9,42 @@ import Foundation
 
 struct DiskManager {
     
+    /// Синглтон
     static var shared = DiskManager()
     
+    ///  Перевод из байтов в читабельный вариант
+    /// - Parameter byte: Сумма байтов
+    /// - Returns: Читабельный формат
     func fromByteInSpace(_ byte: Int64) -> String {
-        ByteCountFormatter.string(fromByteCount: byte, countStyle: .decimal)
+        ByteCountFormatter.string(fromByteCount: byte, countStyle: .file)
     }
     
+    /// Читабельный формат размера свободного места
+    /// - Returns: Размер
     func freeDiskSpace() -> String {
         ByteCountFormatter.string(fromByteCount: freeDiskSpaceInBytes, countStyle: .decimal)
     }
     
+    /// Читабельный формат размера диска
+    /// - Returns: Размер
     func totalDiskSpace()-> String{
         ByteCountFormatter.string(fromByteCount: totalDiskSpaceInBytes, countStyle: .decimal)
     }
     
+    /// Читабельный формат занятого места
+    /// - Returns: Размер
     func usedDiskSpace() -> String {
         ByteCountFormatter.string(fromByteCount: usedDiskSpaceInBytes, countStyle: .decimal)
-    }
-    
-    func convertFromBytes(_ bytes: Int64) -> String {
-        ByteCountFormatter.string(fromByteCount: bytes, countStyle: .decimal)
-    }
-    
-    func calculateDiskSpace() -> [DirectoryData] {
-        [
-            DirectoryData(name: "Free", sizeAtDisk: freeDiskSpace()),
-            DirectoryData(name: "Used", sizeAtDisk: usedDiskSpace())
-        ]
     }
     
 }
 
 extension DiskManager {
+    /// Пустое место на диске
     var freeDiskSpaceInBytes:Int64 {
         get {
             do {
                 let fileURL = URL(fileURLWithPath: NSHomeDirectory() as String)
-                
                 let values = try fileURL.resourceValues(forKeys: [.volumeAvailableCapacityForImportantUsageKey])
                 
                 if let capacity = values.volumeAvailableCapacityForImportantUsage {
@@ -58,7 +57,7 @@ extension DiskManager {
             }
         }
     }
-    
+    /// Общий размер диска
     var totalDiskSpaceInBytes:Int64 {
         get {
             do {
@@ -70,7 +69,7 @@ extension DiskManager {
             }
         }
     }
-    
+    /// Занятое место
     var usedDiskSpaceInBytes:Int64 {
         get {
             let usedSpace = totalDiskSpaceInBytes - freeDiskSpaceInBytes

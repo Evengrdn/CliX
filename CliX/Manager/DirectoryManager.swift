@@ -8,32 +8,39 @@
 import Cocoa
 
 struct DirectoryManager {
-    
+    /// Синглтон
     static var shared = DirectoryManager()
-    
+    ///  Путь к домашней директории
+    private let homeDirectoryPath = "/Library/Containers/"
+    /// Файл менеджер
     private let fileManager = FileManager.default
-    
+    /// Вычисление домашней директории
     var homeDirectory: String {
         var homeDirectory = NSHomeDirectory()
-        let prefix = DataDirectoryType.homeDirectory.path
         
-        if homeDirectory.contains(prefix) {
-            if let range = homeDirectory.range(of: prefix) {
+        if homeDirectory.contains(homeDirectoryPath) {
+            if let range = homeDirectory.range(of: homeDirectoryPath) {
                 homeDirectory = String(homeDirectory[..<range.lowerBound])
             }
         }
         
         return homeDirectory
     }
-    
+    /// Стандратный путь икскод
     var xcodeDefaultPath: String {
-        return "\(homeDirectory + DataDirectoryType.xcodeDefaultPath.path)"
+        return "\(homeDirectory + "/Library/Developer/Xcode")"
     }
     
+    /// Сборка полного пути
+    /// - Parameter directoryType: Тип директории
+    /// - Returns: Полный путь до директории
     func getFullPath(directoryType: DataDirectoryType) -> String {
         return "\(xcodeDefaultPath + directoryType.path)"
     }
     
+    /// Получение типа структуры из пути
+    /// - Parameter path: Путь
+    /// - Returns: Тип структуры
     func getDestinationType(path: String) -> DestinationType? {
         let fileManager = FileManager.default
         var isDirectory: ObjCBool = false
@@ -49,6 +56,9 @@ struct DirectoryManager {
         return nil
     }
     
+    /// Нормализация пути до директории
+    /// - Parameter directory: Директория
+    /// - Returns: Нормализованный путь
     func normalizePathFor(directory: String) -> String {
         var path = directory
         
@@ -59,6 +69,9 @@ struct DirectoryManager {
         return path
     }
     
+    /// Нормализация пути до файла
+    /// - Parameter file: Файл
+    /// - Returns: Нормализованный путь
     func normalizePathFor(file: String) -> String {
         var path = file
         
@@ -69,6 +82,9 @@ struct DirectoryManager {
         return path
     }
     
+    /// Получение вложенных директорий
+    /// - Parameter path: Путь
+    /// - Returns: Вложенные директории
     func getSubDirectoriesForPath(_ path: String) -> [String] {
         let fileManager = FileManager.default
         
@@ -86,6 +102,11 @@ struct DirectoryManager {
     }
     
     
+    /// Расчет размера
+    /// - Parameters:
+    ///   - path: Путь расчета
+    ///   - completion: Замыкание в возвратом значения
+    /// - Returns: Сумма
     func getSize(path: String, completion: (() -> Void)?) -> Int64 {
         var directorySize: Int64 = 0
         var normalizedPath: String
@@ -100,25 +121,27 @@ struct DirectoryManager {
                 return 0
         }
         
-        if destinationType == .file {
-            do {
-                let attributes = try fileManager.attributesOfItem(atPath: normalizedPath)
-                directorySize += attributes[FileAttributeKey.size] as! Int64
-            } catch {
-                print(error.localizedDescription)
-            }
-        } else {
-            
-            let fileManagers = FileManager.default
-            let directories = fileManagers.subpaths(atPath: normalizedPath)
-            
-            for directory in directories! {
+        autoreleasepool {
+            if destinationType == .file {
                 do {
-                    let newPath = normalizedPath + directory
-                    let attributes = try fileManager.attributesOfItem(atPath: newPath)
+                    let attributes = try fileManager.attributesOfItem(atPath: normalizedPath)
                     directorySize += attributes[FileAttributeKey.size] as! Int64
                 } catch {
                     print(error.localizedDescription)
+                }
+            } else {
+                
+                let fileManagers = FileManager.default
+                let directories = fileManagers.subpaths(atPath: normalizedPath)
+                
+                for directory in directories! {
+                    do {
+                        let newPath = normalizedPath + directory
+                        let attributes = try fileManager.attributesOfItem(atPath: newPath)
+                        directorySize += attributes[FileAttributeKey.size] as! Int64
+                    } catch {
+                        print(error.localizedDescription)
+                    }
                 }
             }
         }
@@ -128,6 +151,8 @@ struct DirectoryManager {
         return directorySize
     }
     
+    /// Очистка по пути
+    /// - Parameter path: Путь
     func clean(path: String) {
         do {
             try fileManager.removeItem(atPath: path)
@@ -137,6 +162,8 @@ struct DirectoryManager {
         
     }
     
+    /// Очистка по типу директории
+    /// - Parameter type: Тип директории
     func clean(type: DataDirectoryType) {
         let fullPath = getFullPath(directoryType: type)
         clean(path: fullPath)

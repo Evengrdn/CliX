@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+struct FileNameListView2: View {
+    var body: some View {
+        Text("Test")
+    }
+}
+
 struct FileNameListView: View {
     
     @State var isPresented = false
@@ -28,47 +34,47 @@ struct FileNameListView: View {
         
         VStack(spacing: 0) {
             
-            CategoryView(showData: $isPresented, showDetailIcon: $data, title: categoryTitle,searchpath: categorySearchpath )
+//            CategoryView(showData: $isPresented, showDetailIcon: $data, title: categoryTitle,searchpath: categorySearchpath )
             
-            VStack {
-                HStack(alignment: .top){
-                    Picker("", selection: $filerType){
-                        Text("Name").tag(1)
-                        Text("Size").tag(2)
-                    }.pickerStyle(.segmented).onChange(of: filerType) { sortType in
-                        switch sortType {
-                            case 1:
-                                data.sort{
-                                    $0.name < $1.name
-                                }
-                                break
-                            case 2:
-                                data.sort{
-                                    $0.sizeInDouble() ?? 0.0 > $1.sizeInDouble() ?? 0.0
-                                }
-                                break
-                            default:
-                                data.sort{
-                                    $0.name < $1.name
-                                }
-                        }
-                    }.labelsHidden().padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
-                }
-                List(data){ item in
-                    VStack {
-                        HStack {
-                            VStack{
-                                Text(item.name)
-                            }
-                            Spacer()
-                            VStack{
-                                Text(item.sizeAtDisk)
-                            }
-                        }
-                    }
-                    Divider()
-                }.clipShape(RoundedRectangle(cornerRadius: 8))
-            }.clipShape(RoundedRectangle(cornerRadius: 8)).frame(height: isPresented && data.count > 0  ? listSize : 0).clipped()
+//            VStack {
+//                HStack(alignment: .top){
+//                    Picker("", selection: $filerType){
+//                        Text("Name").tag(1)
+//                        Text("Size").tag(2)
+//                    }.pickerStyle(.segmented).onChange(of: filerType) { sortType in
+//                        switch sortType {
+//                            case 1:
+//                                data.sort{
+//                                    $0.name < $1.name
+//                                }
+//                                break
+//                            case 2:
+//                                data.sort{
+//                                    $0.sizeInDouble() ?? 0.0 > $1.sizeInDouble() ?? 0.0
+//                                }
+//                                break
+//                            default:
+//                                data.sort{
+//                                    $0.name < $1.name
+//                                }
+//                        }
+//                    }.labelsHidden().padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
+//                }
+//                List(data){ item in
+//                    VStack {
+//                        HStack {
+//                            VStack{
+//                                Text(item.name)
+//                            }
+//                            Spacer()
+//                            VStack{
+//                                Text(item.sizeAtDisk)
+//                            }
+//                        }
+//                    }
+//                    Divider()
+//                }.clipShape(RoundedRectangle(cornerRadius: 8))
+//            }.clipShape(RoundedRectangle(cornerRadius: 8)).frame(height: isPresented && data.count > 0  ? listSize : 0).clipped()
         }
         
     }

@@ -7,9 +7,11 @@
 
 import Foundation
 
+
+/// Тип в конце пути
 enum DestinationType {
-    
+    /// Файл
     case file
-    
+    /// Директория
     case directory
 }
