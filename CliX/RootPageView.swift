@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import DiagramKit
 
 struct RootPageView: View {
     var body: some View {

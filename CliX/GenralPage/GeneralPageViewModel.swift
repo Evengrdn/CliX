@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import DiagramKit
 import SwiftUI
 
 class GeneralPageViewModel: ObservableObject {
