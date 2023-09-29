@@ -103,7 +103,6 @@ class GeneralPageViewModel: ObservableObject {
         
         if summ > 500000 {
             let normalizeSumm = summ / 1000 / 1000
-            print(normalizeSumm)
             return .init(type: directory,
                          scanedSpace: scanDirectoryData,
                          info: .init(size: normalizeSumm, sizeUnit: .mb))
