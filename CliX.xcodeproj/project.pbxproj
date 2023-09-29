@@ -13,7 +13,6 @@
 		054241C02801A9BB0074E525 /* RootPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054241BF2801A9BB0074E525 /* RootPageView.swift */; };
 		0555F92D281F082500151989 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0555F92C281F082500151989 /* info.plist */; };
 		0555F92F282003D200151989 /* DiskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555F92E282003D200151989 /* DiskManager.swift */; };
-		056BC66D2836C76400EB0A84 /* DiagramKit in Frameworks */ = {isa = PBXBuildFile; productRef = 056BC66C2836C76400EB0A84 /* DiagramKit */; };
 		056FA7F62801B7250045802A /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FA7F52801B7250045802A /* CategoryView.swift */; };
 		0576FE072800707200478783 /* CliXApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0576FE062800707200478783 /* CliXApp.swift */; };
 		0576FE092800707200478783 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0576FE082800707200478783 /* ContentView.swift */; };
@@ -68,7 +67,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				056BC66D2836C76400EB0A84 /* DiagramKit in Frameworks */,
 				F4CB3B0B2AC4CB580048CA65 /* SkeletonUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,7 +203,6 @@
 			);
 			name = CliX;
 			packageProductDependencies = (
-				056BC66C2836C76400EB0A84 /* DiagramKit */,
 				F4CB3B0A2AC4CB580048CA65 /* SkeletonUI */,
 			);
 			productName = CliX;
@@ -511,11 +508,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		056BC66C2836C76400EB0A84 /* DiagramKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 056BC66B2836C76400EB0A84 /* XCRemoteSwiftPackageReference "DiagramKit" */;
-			productName = DiagramKit;
-		};
 		F4CB3B0A2AC4CB580048CA65 /* SkeletonUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4CB3B092AC4CB580048CA65 /* XCRemoteSwiftPackageReference "SkeletonUI" */;
