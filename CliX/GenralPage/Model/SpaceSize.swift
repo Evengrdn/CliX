@@ -17,15 +17,20 @@ struct SpaceSize {
         return "\(self.size) \(self.sizeUnit)"
     }
     
-    func convertTo(_ unit: UnitsOfMemory) -> String {
-        if unit == sizeUnit {
+    /// Метод конвертации в разные  формат размера
+    /// - Parameter distUnit: Новый тип
+    /// - Returns: Конвертированная строка
+    func convertTo(_ distUnit: UnitsOfMemory) -> String {
+        if distUnit == sizeUnit {
             return fullName
         }
+        let dividerMultiplayer = (sizeUnit.position - distUnit.position)
+        let divider = pow(1000, abs(dividerMultiplayer))
         
-        switch (sizeUnit, unit) {
-        case (let selfUnit, let distinationUnit):
-            let divider = Double(1000 * (abs(selfUnit.position - distinationUnit.position)))
-            return String(format: "%.2f",  Double(size) / divider )
+        if dividerMultiplayer < 0 {
+            return String(format: "%.2f",  Double(size) / divider.primitivePlottable ) + " \(distUnit.rawValue)"
+        } else {
+            return String(format: "%.2f",  Double(size) * divider.primitivePlottable ) + " \(distUnit.rawValue)"
         }
     }
 }

@@ -94,8 +94,11 @@ struct GeneralPageViewController: View {
                         }
                         .sheet(item: $selectedType) { scanData in
                             VStack {
-                                Button("Dismiss") {
-                                    selectedType = nil
+                                HStack {
+                                    Spacer()
+                                    Button("Dismiss") {
+                                        selectedType = nil
+                                    }.padding(.init(top: 16, leading: 0, bottom: 0, trailing: 16))
                                 }
                                 CategoryDetailSheet(scanData: scanData)
                             }
